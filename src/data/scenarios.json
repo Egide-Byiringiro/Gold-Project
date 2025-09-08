@@ -1,0 +1,62 @@
+[
+  {
+    "id": "fixing_things",
+    "title": "I like fixing things that are broken",
+    "title_rw": "Nkunda gukosora ibyangiritse",
+    "description": "You enjoy troubleshooting problems and working with your hands to repair equipment",
+    "description_rw": "Ukunda gushakira ibisubizo ibibazo no gukoresha amaboko mu gusana ibikoresho",
+    "icon": "wrench",
+    "student_careers": ["automotive", "electronics"],
+    "employer_needs": ["maintenance", "repair_services"]
+  },
+  {
+    "id": "building_things",
+    "title": "I like building and creating new things",
+    "title_rw": "Nkunda kubaka no guhanga ibintu bishya",
+    "description": "You enjoy constructing, assembling, and bringing ideas to life through hands-on work",
+    "description_rw": "Ukunda kubaka, guteranya no guhindura ibitekerezo ibikorwa binyuze mu mirimo ngiro",
+    "icon": "hammer",
+    "student_careers": ["solar_energy", "construction"],
+    "employer_needs": ["installation", "construction_projects"]
+  },
+  {
+    "id": "helping_people",
+    "title": "I like helping people solve their problems",
+    "title_rw": "Nkunda gufasha abantu gukemura ibibazo byabo",
+    "description": "You enjoy providing support, guidance, and solutions to help others succeed",
+    "description_rw": "Ukunda gutanga ubufasha, ubujyanama n'ibisubizo bigafasha abandi gutsinda",
+    "icon": "heart",
+    "student_careers": ["ict_support", "hospitality"],
+    "employer_needs": ["customer_service", "technical_support"]
+  },
+  {
+    "id": "working_computers",
+    "title": "I like working with computers and technology",
+    "title_rw": "Nkunda gukorana na mudasobwa n'ikoranabuhanga",
+    "description": "You enjoy using technology, solving digital problems, and learning new software",
+    "description_rw": "Ukunda gukoresha ikoranabuhanga, gukemura ibibazo bya mudasobwa no kwiga porogaramu nshya",
+    "icon": "monitor",
+    "student_careers": ["ict_support", "electronics"],
+    "employer_needs": ["it_support", "digital_services"]
+  },
+  {
+    "id": "creative_work",
+    "title": "I like creative and artistic work",
+    "title_rw": "Nkunda imirimo yo guhanga no gushushanya",
+    "description": "You enjoy designing, creating beautiful things, and expressing creativity through your work",
+    "description_rw": "Ukunda gushushanya, guhanga ibyiza no kugaragaza ubuhanzi mu mirimo yawe",
+    "icon": "palette",
+    "student_careers": ["hospitality", "fashion"],
+    "employer_needs": ["design_services", "creative_industries"]
+  },
+  {
+    "id": "business_money",
+    "title": "I like business and working with money",
+    "title_rw": "Nkunda ubucuruzi no gukorana n'amafaranga",
+    "description": "You enjoy managing resources, understanding finances, and running business operations",
+    "description_rw": "Ukunda gucunga umutungo, gusobanukirwa imari no kuyobora imirimo y'ubucuruzi",
+    "icon": "briefcase",
+    "student_careers": ["fashion", "automotive"],
+    "employer_needs": ["business_operations", "sales_management"]
+  }
+]
