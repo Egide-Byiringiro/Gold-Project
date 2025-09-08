@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* TVET Career Catalyst Color Scheme - Enhanced Visibility */
+  --primary: #047857; /* Enhanced Green - Rwanda's hope/growth */
+  --secondary: #0369a1; /* Enhanced Blue - Trust/professionalism */
+  --accent: #c2410c; /* Enhanced Orange - Urgency/action */
+  --success: #059669; /* Enhanced Emerald */
+  --warning: #d97706; /* Enhanced Amber */
+  --light-blue: #e0f2fe; /* Light blue for navbar */
+  --light-green: #dcfce7; /* Light green for navbar */
+  --sky-blue: #0ea5e9; /* Sky blue for gradient */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-gray-900 font-sans;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-balance;
+  }
+
+  p {
+    @apply text-pretty;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+
+  .bg-light-blue {
+    background-color: var(--light-blue);
+  }
+
+  .bg-light-green {
+    background-color: var(--light-green);
+  }
+
+  .bg-sky-blue {
+    background-color: var(--sky-blue);
+  }
+
+  .bg-gradient-sky {
+    /* Matches Tailwind: bg-gradient-to-b from-sky-500 via-sky-500 to-sky-300 */
+    background: linear-gradient(180deg, #0ea5e9 0%, #0ea5e9 50%, #7dd3fc 100%);
+  }
+
+  /* Button visibility fixes */
+  button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+  }
+
+  button:active {
+    transform: scale(0.98) !important;
+  }
+
+  button:focus-visible {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px !important;
+  }
+}
