@@ -11,16 +11,17 @@ const Layout = ({ children }) => {
   const { lang, setLang, t } = useI18n()
 
   return (
-    <div className="min-h-screen bg-gradient-sky flex flex-col">
+    <div className="min-h-screen bg-gradient-to-r from-sky-200 to-white-900
+flex flex-col">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center gap-2 font-bold text-xl text-gray-900">
               <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">TC</span>
+                <span className="text-white font-bold text-sm">HU</span>
               </div>
-              TVET Career Catalyst
+              HUZA
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
@@ -68,9 +69,9 @@ const Layout = ({ children }) => {
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">TC</span>
+                  <span className="text-white font-bold text-sm">HU</span>
                 </div>
-                <span className="font-bold text-lg">TVET Career Catalyst</span>
+                <span className="font-bold text-lg">HUZA</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Connecting Rwanda's TVET students with career opportunities and employers with skilled talent.
@@ -138,10 +139,10 @@ const Layout = ({ children }) => {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="border-t border-gray-700 mt-8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-400 text-sm">
-                © 2024 TVET Career Catalyst. Supporting Rwanda's Vision 2050 through skills development.
+                © 2025 HUZA. Supporting Rwanda's Vision 2050 through skills development.
               </p>
               <div className="flex flex-wrap justify-center gap-6 text-sm">
                 <Link to="/legal" className="text-gray-400 hover:text-white transition-colors">
@@ -150,9 +151,9 @@ const Layout = ({ children }) => {
                 <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                {/* <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
                   About Us
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
