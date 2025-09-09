@@ -79,9 +79,9 @@ const ScenarioSelector = () => {
         {/* Scenario Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {scenarios.map((scenario) => {
-            const IconComponent = iconMap[scenario.icon]
-            const localTitle = lang === "rw" && scenario.title_rw ? scenario.title_rw : scenario.title
-            const localDesc = lang === "rw" && scenario.description_rw ? scenario.description_rw : scenario.description
+            const IconComponent = iconMap[scenario.icon] || Briefcase
+            const localTitle = (lang === "rw" && scenario.title_rw ? scenario.title_rw : scenario.title) || "Untitled"
+            const localDesc = (lang === "rw" && scenario.description_rw ? scenario.description_rw : scenario.description) || ""
             const isSelected = selectedScenario === scenario.id
 
             return (

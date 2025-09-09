@@ -28,6 +28,9 @@ const HomePage = () => {
 
           <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">{t("home.hero.subtitle")}</p>
 
+          {/* Engaging Image Cards (auto-rotating) */}
+          <ImageShowcase />
+
           {/* Success Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
             <StatCard icon={<CheckCircle className="h-8 w-8 text-success" />} value="850+" label={t("home.stats.graduates")} />
@@ -128,5 +131,53 @@ const UserCard = ({ href, icon, bg, title, description, cta }) => (
     </div>
   </Link>
 )
+
+// Simple, eye-engaging, auto-rotating image cards
+import React, { useEffect, useMemo, useState } from "react"
+const ImageShowcase = () => {
+  const images = useMemo(
+    () => [
+      // Keep these primary three
+      { src: "/placeholder-user.jpg", title: "Future Engineer", desc: "Learning by doing, every single day." },
+      { src: "/placeholder-user.jpg", title: "Creative Maker", desc: "Turning ideas into real products." },
+      { src: "/placeholder-user.jpg", title: "Tech Explorer", desc: "Building skills for tomorrow's jobs." },
+      // Additional images to interchange
+      { src: "/placeholder.jpg", title: "Workshop Practice", desc: "Hands-on sessions with mentors." },
+      { src: "/placeholder.jpg", title: "Real Equipment", desc: "Train with the tools used in industry." },
+      { src: "/placeholder-user.jpg", title: "Proud Graduate", desc: "Skills that open real opportunities." },
+      { src: "/placeholder-user.jpg", title: "Problem Solver", desc: "From idea to working prototype." },
+      { src: "/placeholder.jpg", title: "Lab Time", desc: "Experiment, iterate, improve." },
+      { src: "/placeholder-user.jpg", title: "Peer Learning", desc: "Grow faster together." },
+      { src: "/placeholder.jpg", title: "Career Focus", desc: "Build a portfolio employers value." },
+    ],
+    [],
+  )
+
+  const [start, setStart] = useState(0)
+  useEffect(() => {
+    const id = setInterval(() => setStart((s) => (s + 1) % images.length), 3500)
+    return () => clearInterval(id)
+  }, [images.length])
+
+  const visible = [0, 1, 2].map((offset) => images[(start + offset) % images.length])
+
+  return (
+    <div className="max-w-5xl mx-auto mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {visible.map((item, idx) => (
+          <div key={`${item.src}-${idx}`} className="bg-white/90 backdrop-blur border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+              <img src={item.src} alt={item.title} className="w-full h-full object-cover" />
+            </div>
+            <div className="p-4">
+              <div className="font-semibold text-gray-900">{item.title}</div>
+              <div className="text-sm text-gray-600 mt-1">{item.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default HomePage

@@ -9,6 +9,16 @@ const Layout = ({ children }) => {
   const { pathname } = useLocation()
   const isHomePage = pathname === "/"
   const { lang, setLang, t } = useI18n()
+  const siteName = (() => {
+    try {
+      const raw = typeof window !== "undefined" ? window.localStorage.getItem("admin_settings") : null
+      if (!raw) return "TVET Career Catalyst"
+      const parsed = JSON.parse(raw)
+      return parsed?.siteName || "TVET Career Catalyst"
+    } catch {
+      return "TVET Career Catalyst"
+    }
+  })()
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-sky-200 to-white-900
@@ -142,7 +152,7 @@ flex flex-col">
           <div className="border-t border-gray-700 mt-8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-400 text-sm">
-                © 2025 HUZA. Supporting Rwanda's Vision 2050 through skills development.
+                © 2024 {siteName}. Supporting Rwanda's Vision 2050 through skills development.
               </p>
               <div className="flex flex-wrap justify-center gap-6 text-sm">
                 <Link to="/legal" className="text-gray-400 hover:text-white transition-colors">
