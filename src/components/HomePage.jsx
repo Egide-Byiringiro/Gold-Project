@@ -138,17 +138,17 @@ const ImageShowcase = () => {
   const images = useMemo(
     () => [
       // Keep these primary three
-      { src: "/placeholder-user.jpg", title: "Future Engineer", desc: "Learning by doing, every single day." },
-      { src: "/placeholder-user.jpg", title: "Creative Maker", desc: "Turning ideas into real products." },
-      { src: "/placeholder-user.jpg", title: "Tech Explorer", desc: "Building skills for tomorrow's jobs." },
+      { src: "/accident.jpg", title: "Future Engineer", desc: "Learning by doing, every single day." },
+      { src: "/adeline.jpg", title: "Creative Maker", desc: "Turning ideas into real products." },
+      { src: "/flight.jpg", title: "Tech Explorer", desc: "Building skills for tomorrow's jobs." },
       // Additional images to interchange
-      { src: "/placeholder.jpg", title: "Workshop Practice", desc: "Hands-on sessions with mentors." },
-      { src: "/placeholder.jpg", title: "Real Equipment", desc: "Train with the tools used in industry." },
-      { src: "/placeholder-user.jpg", title: "Proud Graduate", desc: "Skills that open real opportunities." },
-      { src: "/placeholder-user.jpg", title: "Problem Solver", desc: "From idea to working prototype." },
-      { src: "/placeholder.jpg", title: "Lab Time", desc: "Experiment, iterate, improve." },
-      { src: "/placeholder-user.jpg", title: "Peer Learning", desc: "Grow faster together." },
-      { src: "/placeholder.jpg", title: "Career Focus", desc: "Build a portfolio employers value." },
+      { src: "/freelance.jpg", title: "Workshop Practice", desc: "Hands-on sessions with mentors." },
+      { src: "/adeline.jpg", title: "Real Equipment", desc: "Train with the tools used in industry." },
+      { src: "/adeline.jpg", title: "Proud Graduate", desc: "Skills that open real opportunities." },
+      { src: "/accident.jpg", title: "Problem Solver", desc: "From idea to working prototype." },
+      { src: "/accident.jpg", title: "Lab Time", desc: "Experiment, iterate, improve." },
+      { src: "/accident.jpg", title: "Peer Learning", desc: "Grow faster together." },
+      { src: "/accident.jpg", title: "Career Focus", desc: "Build a portfolio employers value." },
     ],
     [],
   )
