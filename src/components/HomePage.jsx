@@ -17,7 +17,7 @@ import {
 const HomePage = () => {
   const { t } = useI18n()
   return (
-   <div className="min-h-screen bg-gradient-to-b from-sky-300 via-sky-200 to-sky-100">
+   <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="text-center max-w-4xl mx-auto">
