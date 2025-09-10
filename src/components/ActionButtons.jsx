@@ -97,7 +97,7 @@ const ActionButtons = ({ careerId, hideProgress = false }) => {
             {!showSchools ? (
               <button
                 onClick={() => setShowSchools(true)}
-                className="w-full bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-all duration-200 hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-500 transition-all duration-200 hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-primary/50"
               >
                 {t("actions.viewSchools")}
               </button>
@@ -113,7 +113,7 @@ const ActionButtons = ({ careerId, hideProgress = false }) => {
                       </div>
                       <button
                         onClick={() => handleApplyToSchool(school)}
-                        className="bg-primary text-white px-3 py-1 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-all duration-200 flex items-center hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        className="bg-primary text-white px-3 py-1 rounded-lg text-xs font-semibold hover:bg-blue-500 transition-all duration-200 flex items-center hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-primary/50"
                       >
                         Apply
                         <ExternalLink className="h-3 w-3 ml-1" />
@@ -150,7 +150,7 @@ const ActionButtons = ({ careerId, hideProgress = false }) => {
           {/* Share with Friends */}
           <button
             onClick={handleShare}
-            className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-4 hover:bg-accent/10 transition-all duration-200 text-left hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-accent/50"
+            className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-4 hover:bg-blue-100 transition-all duration-200 text-left hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-accent/50"
           >
             <div className="flex items-center">
               <div className="bg-accent rounded-full p-2 mr-3">
@@ -166,7 +166,7 @@ const ActionButtons = ({ careerId, hideProgress = false }) => {
           {/* Parent Guide */}
           <button
             onClick={handleParentGuide}
-            className="bg-gradient-to-r from-pink-50 to-pink-100 border border-pink-200 rounded-lg p-4 hover:bg-pink-100 transition-all duration-200 text-left hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-pink-500/50"
+            className="bg-gradient-to-r from-pink-50 to-pink-100 border border-pink-200 rounded-lg p-4 hover:bg-blue-100 transition-all duration-200 text-left hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-pink-500/50"
           >
             <div className="flex items-center">
               <div className="bg-pink-500 rounded-full p-2 mr-3">

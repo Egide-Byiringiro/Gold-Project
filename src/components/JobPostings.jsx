@@ -195,7 +195,7 @@ const JobPostings = () => {
 
                     <button
                       onClick={() => handleApply(job)}
-                      className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors flex items-center"
+                      className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors flex items-center"
                     >
                       Apply Now
                       <ExternalLink className="h-4 w-4 ml-2" />
@@ -254,13 +254,13 @@ const JobPostings = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => window.open("mailto:jobs@tvetcareercatalyst.rw?subject=Job Alert Request", "_blank")}
-                className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-blue-100 transition-colors"
               >
                 Set Up Job Alerts
               </button>
               <button
                 onClick={() => window.open("/", "_self")}
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors"
               >
                 Explore Career Paths
               </button>

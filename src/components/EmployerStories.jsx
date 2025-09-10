@@ -51,7 +51,7 @@ const EmployerStories = () => {
                 className={`px-3 sm:px-4 py-2 rounded-full font-semibold transition-all duration-300 min-h-[44px] ${
                   selectedIndustry === industry.id
                     ? "bg-secondary text-white shadow-md"
-                    : "bg-white text-gray-700 border border-gray-300 hover:border-secondary hover:bg-secondary/10 hover:text-secondary"
+                    : "bg-white text-gray-700 border border-gray-300 hover:border-blue-300 hover:bg-blue-100 hover:text-blue-700"
                 }`}
               >
                 <span className="text-sm sm:text-base">{industry.name}</span>
@@ -139,7 +139,7 @@ const EmployerStories = () => {
                 {/* Contact Button */}
                 <button
                   onClick={() => handleContactEmployer(employer)}
-                  className="w-full bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors flex items-center justify-center"
+                  className="w-full bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors flex items-center justify-center"
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   Connect with {employer.company_name}
@@ -182,7 +182,7 @@ const EmployerStories = () => {
                 onClick={() =>
                   window.open("mailto:partnerships@tvetcareercatalyst.rw?subject=Partnership Inquiry", "_blank")
                 }
-                className="bg-white text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-blue-100 transition-colors"
               >
                 Start Hiring TVET Talent
               </button>

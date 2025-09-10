@@ -90,8 +90,13 @@ const ScenarioSelector = () => {
                 onClick={() => handleScenarioSelect(scenario.id)}
                 className={`group p-6 sm:p-8 rounded-xl border-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-500 text-left transform-gpu min-h-[44px] relative overflow-hidden ${
                   isSelected
+<<<<<<< HEAD
                     ? "border-primary shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform scale-105 -translate-y-2"
                     : "border-gray-200 hover:border-primary/50 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105"
+=======
+                    ? "border-primary bg-primary/5 shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform scale-105 -translate-y-2"
+                    : "border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-100 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105"
+>>>>>>> ft/mybuttons
                 }`}
                 style={{ backgroundColor: '#d6d6d0' }}
               >
@@ -104,13 +109,13 @@ const ScenarioSelector = () => {
                 <div className="flex flex-col items-center text-center relative z-10">
                   <div
                     className={`rounded-full p-3 sm:p-4 mb-3 sm:mb-4 transition-all duration-300 shadow-md group-hover:scale-110 ${
-                      isSelected ? "bg-primary text-white" : "bg-gray-100 text-gray-600 group-hover:bg-primary/10 group-hover:text-primary"
+                      isSelected ? "bg-primary text-white" : "bg-gray-100 text-gray-600 group-hover:bg-blue-200 group-hover:text-blue-700"
                     }`}
                   >
                     <IconComponent className="h-6 w-6 sm:h-8 sm:w-8" />
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">{localTitle}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">{localTitle}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{localDesc}</p>
 
                   {isSelected && (
@@ -133,7 +138,7 @@ const ScenarioSelector = () => {
           <div className="text-center px-4">
             <button
               onClick={handleContinue}
-              className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-primary/90 transition-all duration-300 inline-flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:scale-105 hover:-translate-y-1 transform-gpu min-h-[44px] min-w-[44px]"
+              className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-500 transition-all duration-300 inline-flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:scale-105 hover:-translate-y-1 transform-gpu min-h-[44px] min-w-[44px]"
             >
               {t("scenario.continue")}
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

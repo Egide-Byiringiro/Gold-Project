@@ -98,8 +98,8 @@ const StatCard = ({ icon, value, label }) => (
     </div>
     
     {/* Decorative elements */}
-    <div className="absolute top-4 right-4 w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors duration-300"></div>
-    <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary/20 rounded-full group-hover:bg-secondary/40 transition-colors duration-300"></div>
+    <div className="absolute top-4 right-4 w-2 h-2 bg-primary/20 rounded-full group-hover:bg-blue-400 transition-colors duration-300"></div>
+    <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary/20 rounded-full group-hover:bg-blue-400 transition-colors duration-300"></div>
   </div>
 )
 
@@ -112,7 +112,7 @@ const UserCard = ({ href, icon, bg, title, description, cta }) => (
     <div className={`absolute inset-0 bg-gradient-to-br from-${bg}/5 via-transparent to-${bg}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
     
     <div className="flex flex-col items-center text-center relative z-10">
-      <div className={`bg-${bg}/10 rounded-full p-4 mb-4 group-hover:bg-${bg}/20 transition-colors shadow-md group-hover:scale-110 duration-300`}>
+      <div className={`bg-${bg}/10 rounded-full p-4 mb-4 group-hover:bg-blue-200 transition-colors shadow-md group-hover:scale-110 duration-300`}>
         {icon}
       </div>
       <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">{title}</h3>
@@ -165,7 +165,7 @@ const CompanyLogosSection = () => {
         {companies.map((company, idx) => (
           <div 
             key={idx} 
-            className={`flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-white/50 transition-all duration-500 transform-gpu ${
+            className={`flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-blue-100 transition-all duration-500 transform-gpu ${
               isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
