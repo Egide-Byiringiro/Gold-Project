@@ -88,7 +88,7 @@ const ScenarioSelector = () => {
               <button
                 key={scenario.id}
                 onClick={() => handleScenarioSelect(scenario.id)}
-                className={`group p-6 sm:p-8 rounded-xl border-2 transition-all duration-500 text-left transform-gpu min-h-[44px] ${
+                className={`group p-6 sm:p-8 rounded-xl border-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-500 text-left transform-gpu min-h-[44px] ${
                   isSelected
                     ? "border-primary bg-primary/5 shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform scale-105 -translate-y-2"
                     : "border-gray-200 bg-white hover:border-primary/50 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105"

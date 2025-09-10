@@ -75,7 +75,7 @@ const HomePage = () => {
 }
 
 const StatCard = ({ icon, value, label }) => (
-  <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 text-center hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:border-primary/20 relative overflow-hidden transform-gpu">
+  <div className="group rounded-2xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 text-center hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:border-primary/20 relative overflow-hidden transform-gpu" style={{ backgroundColor: '#d6d6d0' }}>
     {/* Layered shadow system for floating effect */}
     <div className="absolute inset-0 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.08)] group-hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-shadow duration-500"></div>
     
@@ -104,7 +104,7 @@ const StatCard = ({ icon, value, label }) => (
 )
 
 const UserCard = ({ href, icon, bg, title, description, cta }) => (
-  <Link to={href} className={`group bg-white rounded-xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 border-transparent hover:border-${bg} transition-all duration-300 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform hover:-translate-y-3 hover:scale-105 relative overflow-hidden transform-gpu min-h-[44px]`}>
+  <Link to={href} className={`group rounded-xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 border-transparent hover:border-${bg} transition-all duration-300 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform hover:-translate-y-3 hover:scale-105 relative overflow-hidden transform-gpu min-h-[44px]`} style={{ backgroundColor: '#d6d6d0' }}>
     {/* Layered shadow system for floating effect */}
     <div className="absolute inset-0 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.08)] group-hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-shadow duration-500"></div>
     
@@ -228,10 +228,11 @@ const ImageShowcase = () => {
         {visible.map((item, idx) => (
           <div 
             key={`${item.src}-${start}-${idx}`} 
-            className={`group bg-white/90 backdrop-blur border border-gray-200 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105 transition-all duration-500 transform-gpu ${
+            className={`group backdrop-blur border border-gray-200 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105 transition-all duration-500 transform-gpu ${
               isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
             }`}
             style={{
+              backgroundColor: '#d6d6d0',
               transitionDelay: `${idx * 100}ms`, // Staggered entrance
               transitionDuration: '600ms'
             }}

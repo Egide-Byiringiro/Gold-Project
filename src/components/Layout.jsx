@@ -22,9 +22,11 @@ const Layout = ({ children }) => {
     }
   })()
 
-  // Close mobile menu when route changes
+  // Close mobile menu and scroll to top when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false)
+    // Scroll to top when route changes
+    window.scrollTo(0, 0)
   }, [pathname])
 
   // Prevent body scroll when mobile menu is open
