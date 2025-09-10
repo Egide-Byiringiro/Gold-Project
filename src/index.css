@@ -80,6 +80,26 @@
     background: linear-gradient(180deg, #0ea5e9 0%, #0ea5e9 50%, #7dd3fc 100%);
   }
 
+  /* Enhanced animations and performance */
+  .transform-gpu {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced shadow utilities */
+  .shadow-floating {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .shadow-floating-hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
   /* Button visibility fixes */
   button:focus {
     outline: none !important;
@@ -93,5 +113,33 @@
   button:focus-visible {
     outline: 2px solid var(--primary) !important;
     outline-offset: 2px !important;
+  }
+
+  /* Touch-friendly minimum sizes */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Mobile-first responsive utilities */
+  @media (max-width: 640px) {
+    .mobile-padding {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Animation performance optimizations */
+  .animate-smooth {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

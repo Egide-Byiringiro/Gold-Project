@@ -1,14 +1,16 @@
 "use client"
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { useI18n } from "../context/i18n"
-import { Home, Users, Building2, Users2, Phone, Mail, MapPin } from "lucide-react"
+import { Home, Users, Building2, Users2, Phone, Mail, MapPin, Menu, X } from "lucide-react"
 
 const Layout = ({ children }) => {
   const { pathname } = useLocation()
   const isHomePage = pathname === "/"
   const { lang, setLang, t } = useI18n()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  
   const siteName = (() => {
     try {
       const raw = typeof window !== "undefined" ? window.localStorage.getItem("admin_settings") : null
@@ -19,6 +21,24 @@ const Layout = ({ children }) => {
       return "TVET Career Catalyst"
     }
   })()
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-sky-200 to-white-900
@@ -34,6 +54,7 @@ flex flex-col">
               HUZA
             </Link>
 
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
               <Link to="/" className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors">
                 <Home className="w-4 h-4" />
@@ -61,9 +82,62 @@ flex flex-col">
               </select>
             </nav>
 
-            <Link to="/" className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors">
-              <Home className="w-5 h-5" />
-            </Link>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-3 text-gray-600 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-100 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation Menu */}
+          <div className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen 
+              ? 'max-h-screen opacity-100 pb-4' 
+              : 'max-h-0 opacity-0 overflow-hidden'
+          }`}>
+            <nav className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+              <Link 
+                to="/" 
+                className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+              >
+                <Home className="w-5 h-5" />
+                {t("nav.home")}
+              </Link>
+              <Link 
+                to="/scenarios/student" 
+                className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+              >
+                <Users className="w-5 h-5" />
+                {t("nav.students")}
+              </Link>
+              <Link 
+                to="/employers" 
+                className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+              >
+                <Building2 className="w-5 h-5" />
+                {t("nav.employers")}
+              </Link>
+              <Link 
+                to="/parents" 
+                className="flex items-center gap-3 text-gray-600 hover:text-orange-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+              >
+                <Users2 className="w-5 h-5" />
+                {t("nav.parents")}
+              </Link>
+              <div className="px-4 py-3">
+                <select
+                  value={lang}
+                  onChange={(e) => setLang(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 bg-white hover:border-gray-400 min-h-[44px]"
+                >
+                  <option value="en">English</option>
+                  <option value="rw">Kinyarwanda</option>
+                </select>
+              </div>
+            </nav>
           </div>
         </div>
       </header>

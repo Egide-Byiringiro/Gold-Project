@@ -50,14 +50,14 @@ const JobPostings = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-sky">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
             Current <span className="text-primary">Job Openings</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             Discover the latest job opportunities for TVET graduates across Rwanda. Companies are actively seeking
             skilled technical professionals.
           </p>

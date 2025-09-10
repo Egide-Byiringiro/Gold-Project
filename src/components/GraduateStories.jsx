@@ -35,10 +35,10 @@ const GraduateStories = () => {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Career not found</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Career not found</h2>
           <button
             onClick={() => navigate("/")}
-            className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+            className="bg-primary text-white px-5 sm:px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:scale-105 hover:-translate-y-1 transform-gpu min-h-[44px] min-w-[44px]"
           >
             Back to Home
           </button>
@@ -67,33 +67,33 @@ const GraduateStories = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-sky">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="mb-8">
-          <button onClick={() => navigate(-1)} className="inline-flex items-center text-gray-600 hover:text-primary mb-6 transition-colors">
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            {t("graduates.back")}
+        <div className="mb-6 sm:mb-8">
+          <button onClick={() => navigate(-1)} className="inline-flex items-center text-gray-600 hover:text-primary mb-4 sm:mb-6 transition-colors min-h-[44px] px-2 py-2 rounded-lg hover:bg-gray-50">
+            <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+            <span className="text-sm sm:text-base">{t("graduates.back")}</span>
           </button>
 
           {/* Progress Indicator (4 steps) */}
-          <div className="flex justify-center mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-success rounded-full flex items-center justify-center text-white text-sm font-bold">✓</div>
-              <div className="w-16 h-1 bg-success"></div>
-              <div className="w-8 h-8 bg-success rounded-full flex items-center justify-center text-white text-sm font-bold">✓</div>
-              <div className="w-16 h-1 bg-success"></div>
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">3</div>
-              <div className="w-16 h-1 bg-gray-300"></div>
-              <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-sm">4</div>
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <div className="flex items-center space-x-1 sm:space-x-2">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-success rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">✓</div>
+              <div className="w-8 sm:w-16 h-1 bg-success"></div>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-success rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">✓</div>
+              <div className="w-8 sm:w-16 h-1 bg-success"></div>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">3</div>
+              <div className="w-8 sm:w-16 h-1 bg-gray-300"></div>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-xs sm:text-sm">4</div>
             </div>
           </div>
         </div>
 
         {/* Page Title */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">{t("graduates.title")}</h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">{t("graduates.title")}</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             {t("graduates.subtitle", { career: career.title })}
           </p>
         </div>
@@ -109,13 +109,13 @@ const GraduateStories = () => {
               >
                 {graduates.map((graduate) => (
                   <div key={graduate.id} className="w-full flex-shrink-0">
-                    <div className="bg-white rounded-2xl shadow-lg p-6 mx-3 border border-gray-100">
+                    <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 sm:p-6 mx-2 sm:mx-3 border border-gray-100 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-500 transform-gpu">
                       {/* Graduate Header */}
                       <div className="flex items-start space-x-3 mb-4">
                         {graduate.photo_url ? (
-                          <img src={graduate.photo_url} alt={graduate.name} className="w-12 h-12 rounded-full object-cover" />
+                          <img src={graduate.photo_url} alt={graduate.name} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" />
                         ) : (
-                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-lg font-bold">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-sm sm:text-lg font-bold">
                             {graduate.name
                               .split(" ")
                               .map((n) => n[0])
@@ -123,8 +123,8 @@ const GraduateStories = () => {
                           </div>
                         )}
                         <div className="flex-1">
-                          <h3 className="text-lg font-bold text-gray-900">{graduate.name}</h3>
-                          <p className="text-primary font-semibold text-sm">{graduate.current_role}</p>
+                          <h3 className="text-base sm:text-lg font-bold text-gray-900">{graduate.name}</h3>
+                          <p className="text-primary font-semibold text-xs sm:text-sm">{graduate.current_role}</p>
                           <div className="flex items-center text-gray-600 mt-1">
                             <Building2 className="h-3 w-3 mr-1" />
                             <span className="text-xs">{graduate.company}</span>
