@@ -1,0 +1,29 @@
+:root{--bg:#0b132b;--panel:#1c2541;--muted:#3a506b;--accent:#5bc0be;--primary:#6ee7b7;--danger:#ef4444;--warn:#f59e0b;--text:#e5e7eb}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:linear-gradient(180deg,#0ea5e9 0%,#22d3ee 100%);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0f172a}
+.container{max-width:1200px;margin:0 auto;padding:16px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.col{flex:1 1 300px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid #e5e7eb;background:#111827;color:#fff;cursor:pointer}
+.btn.primary{background:#111827}
+.btn.ghost{background:#fff;color:#111827}
+.btn.warn{background:var(--warn);border-color:transparent}
+.btn.danger{background:var(--danger);border-color:transparent}
+.input,select,textarea{width:100%;padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px}
+.table{width:100%;border-collapse:separate;border-spacing:0}
+.table th,.table td{padding:10px 12px;border-bottom:1px solid #e5e7eb;text-align:left}
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.muted{color:#6b7280}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-block;padding:4px 8px;border-radius:9999px;background:#f3f4f6;border:1px solid #e5e7eb;color:#374151;font-size:12px}
+.header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
+.header-inner{max-width:1200px;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800}
+.brand-badge{width:32px;height:32px;border-radius:8px;background:#059669;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.sidebar{background:#ffffffcc;backdrop-filter:saturate(180%) blur(6px);border-right:1px solid #e5e7eb;width:260px;flex:0 0 260px}
+.sidebar a{display:block;padding:10px 12px;border-radius:8px;color:#111827;text-decoration:none;border:1px solid transparent}
+.sidebar a.active{background:#111827;color:#fff}
+.main{display:flex;min-height:100vh}
+.content{flex:1;padding:16px}
+.login{max-width:380px;margin:10vh auto;padding:24px}
+

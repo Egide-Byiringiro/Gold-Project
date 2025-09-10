@@ -9,10 +9,11 @@ export default defineConfig({
       registerType: "autoUpdate",
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,json}"],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, 
       },
       manifest: {
-        name: "TVET Career Catalyst",
-        short_name: "TVET Careers",
+        name: "TVET-HUZA",
+        short_name: "TVET-HUZA",
         description: "Career matching platform for Rwanda TVET graduates",
         theme_color: "#059669",
         background_color: "#ffffff",
