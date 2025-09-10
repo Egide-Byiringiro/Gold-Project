@@ -62,35 +62,35 @@ const ActionButtons = ({ careerId, hideProgress = false }) => {
     <div className="max-w-4xl mx-auto">
       {/* Progress Indicator (optional) */}
       {!hideProgress && (
-        <div className="flex justify-center mb-8">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-success rounded-full flex items-center justify-center text-white text-sm font-bold">✓</div>
-            <div className="w-16 h-1 bg-success"></div>
-            <div className="w-8 h-8 bg-success rounded-full flex items-center justify-center text-white text-sm font-bold">✓</div>
-            <div className="w-16 h-1 bg-success"></div>
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">3</div>
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <div className="flex items-center space-x-1 sm:space-x-2">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-success rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">✓</div>
+            <div className="w-8 sm:w-16 h-1 bg-success"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-success rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">✓</div>
+            <div className="w-8 sm:w-16 h-1 bg-success"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">3</div>
           </div>
         </div>
       )}
 
       {/* Main Action Section */}
-      <div className="bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">{t("actions.readyTitle")}</h2>
+      <div className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 sm:p-6 mb-4 sm:mb-6 border border-gray-100 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-500 transform-gpu">
+        <div className="text-center mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">{t("actions.readyTitle")}</h2>
           <p className="text-base text-gray-600">{t("actions.readyDesc", { career: career.title })}</p>
         </div>
 
         {/* Primary Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
           {/* Apply to School */}
-          <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-4 border border-primary/20">
+          <div className="group bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-3 sm:p-4 border border-primary/20 hover:shadow-md hover:scale-105 transition-all duration-300 transform-gpu">
             <div className="flex items-center mb-3">
-              <div className="bg-primary rounded-full p-2 mr-3">
-                <GraduationCap className="h-5 w-5 text-white" />
+              <div className="bg-primary rounded-full p-2 mr-3 group-hover:scale-110 transition-transform duration-300">
+                <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900">{t("actions.apply")}</h3>
-                <p className="text-gray-600 text-sm">{t("actions.applyDesc")}</p>
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">{t("actions.apply")}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm group-hover:text-gray-700 transition-colors duration-300">{t("actions.applyDesc")}</p>
               </div>
             </div>
 

@@ -70,70 +70,72 @@ const EmployerDashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-sky">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <button onClick={() => navigate("/")} className="inline-flex items-center text-gray-600 hover:text-secondary mb-6 transition-colors">{t("emp.back")}</button>
+        <div className="text-center mb-8 sm:mb-12">
+          <button onClick={() => navigate("/")} className="inline-flex items-center text-gray-600 hover:text-secondary mb-4 sm:mb-6 transition-colors min-h-[44px] px-2 py-2 rounded-lg hover:bg-gray-50">
+            <span className="text-sm sm:text-base">{t("emp.back")}</span>
+          </button>
 
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">{t("emp.title")}</h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">{t("emp.lead")}</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">{t("emp.title")}</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">{t("emp.lead")}</p>
         </div>
 
         {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
-          <div className="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <Building2 className="h-8 w-8 text-secondary mx-auto mb-2" />
-            <div className="text-2xl font-bold text-gray-900">{stats.totalEmployers}</div>
-            <div className="text-gray-600">{t("emp.stats.partners")}</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12 max-w-6xl mx-auto">
+          <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 text-center hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105 transition-all duration-500 transform-gpu">
+            <Building2 className="h-6 w-6 sm:h-8 sm:w-8 text-secondary mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300">{stats.totalEmployers}</div>
+            <div className="text-sm sm:text-base text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{t("emp.stats.partners")}</div>
           </div>
 
-          <div className="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <Users className="h-8 w-8 text-success mx-auto mb-2" />
-            <div className="text-2xl font-bold text-gray-900">{stats.totalHired}</div>
-            <div className="text-gray-600">{t("emp.stats.hired")}</div>
+          <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 text-center hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105 transition-all duration-500 transform-gpu">
+            <Users className="h-6 w-6 sm:h-8 sm:w-8 text-success mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-success transition-colors duration-300">{stats.totalHired}</div>
+            <div className="text-sm sm:text-base text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{t("emp.stats.hired")}</div>
           </div>
 
-          <div className="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <Briefcase className="h-8 w-8 text-accent mx-auto mb-2" />
-            <div className="text-2xl font-bold text-gray-900">{stats.totalPositions}</div>
+          <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 text-center hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105 transition-all duration-500 transform-gpu">
+            <Briefcase className="h-6 w-6 sm:h-8 sm:w-8 text-accent mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-accent transition-colors duration-300">{stats.totalPositions}</div>
             <div className="text-gray-600">{t("emp.stats.positions")}</div>
           </div>
 
-          <div className="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold text-gray-900">{stats.activelyHiring}</div>
-            <div className="text-gray-600">{t("emp.stats.active")}</div>
+          <div className="group bg-white rounded-xl p-4 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 text-center hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105 transition-all duration-500 transform-gpu">
+            <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">{stats.activelyHiring}</div>
+            <div className="text-sm sm:text-base text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{t("emp.stats.active")}</div>
           </div>
         </div>
 
         {/* Skills Selection */}
-        <div className="max-w-6xl mx-auto mb-12">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t("emp.skills.title")}</h2>
-            <p className="text-lg text-gray-600">{t("emp.skills.desc")}</p>
+        <div className="max-w-6xl mx-auto mb-8 sm:mb-12">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">{t("emp.skills.title")}</h2>
+            <p className="text-base sm:text-lg text-gray-600 px-2">{t("emp.skills.desc")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {scenarios.map((scenario) => (
               <button
                 key={scenario.id}
                 onClick={() => handleScenarioSelect(scenario.id)}
-                className={`p-6 rounded-xl border-2 transition-all duration-300 text-left hover:shadow-lg ${
+                className={`group p-4 sm:p-6 rounded-xl border-2 transition-all duration-500 text-left transform-gpu min-h-[44px] ${
                   selectedScenario === scenario.id
-                    ? "border-secondary bg-secondary/5 shadow-lg"
-                    : "border-gray-200 bg-white hover:border-secondary/50"
+                    ? "border-secondary bg-secondary/5 shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform scale-105 -translate-y-2"
+                    : "border-gray-200 bg-white hover:border-secondary/50 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105"
                 }`}
               >
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-300">
                   {scenario.title.replace("I like", "We need help with")}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
                   {scenario.description.replace("You enjoy", "Find talent who excels at")}
                 </p>
 
                 {selectedScenario === scenario.id && (
-                  <div className="mt-3 flex items-center text-secondary font-semibold">
+                  <div className="mt-3 flex items-center text-secondary font-semibold text-sm sm:text-base">
                     <CheckCircle className="h-4 w-4 mr-2" />
                     {t("emp.selected")}
                   </div>

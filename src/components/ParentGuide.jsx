@@ -76,17 +76,17 @@ const ParentGuide = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-sky">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center gap-4">
-            <Link to="/" className="p-2 hover:bg-gray-100 rounded-lg">
-              <ArrowLeft className="w-5 h-5" />
+            <Link to="/" className="p-2 hover:bg-gray-100 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center">
+              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Parent Guide</h1>
-              <p className="text-gray-600">Supporting your child's TVET journey</p>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Parent Guide</h1>
+              <p className="text-sm sm:text-base text-gray-600">Supporting your child's TVET journey</p>
             </div>
           </div>
         </div>
