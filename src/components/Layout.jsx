@@ -153,43 +153,37 @@ flex flex-col">
             <nav className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
               <Link 
                 to="/" 
-<<<<<<< HEAD
-                className="flex items-center justify-center text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-=======
                 className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
->>>>>>> ft/mybuttons
+
               >
                 <Home className="w-6 h-6" />
               </Link>
               <Link 
                 to="/scenarios/student" 
-<<<<<<< HEAD
+
                 className="flex items-center gap-3 text-gray-700 hover:text-green-800 transition-colors py-3 px-4 rounded-lg bg-green-100 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-=======
+
                 className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
->>>>>>> ft/mybuttons
+
               >
                 <Users className="w-5 h-5" />
                 {t("nav.students")}
               </Link>
               <Link 
                 to="/employers" 
-<<<<<<< HEAD
+
                 className="flex items-center gap-3 text-gray-700 hover:text-green-800 transition-colors py-3 px-4 rounded-lg bg-green-100 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-=======
+
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
->>>>>>> ft/mybuttons
+
               >
                 <Building2 className="w-5 h-5" />
                 {t("nav.employers")}
               </Link>
               <Link 
                 to="/parents" 
-<<<<<<< HEAD
-                className="flex items-center gap-3 text-gray-700 hover:text-green-800 transition-colors py-3 px-4 rounded-lg bg-green-100 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-=======
                 className="flex items-center gap-3 text-gray-600 hover:text-orange-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
->>>>>>> ft/mybuttons
+
               >
                 <Users2 className="w-5 h-5" />
                 {t("nav.parents")}
