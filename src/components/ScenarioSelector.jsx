@@ -88,12 +88,19 @@ const ScenarioSelector = () => {
               <button
                 key={scenario.id}
                 onClick={() => handleScenarioSelect(scenario.id)}
-                className={`group p-6 sm:p-8 rounded-xl border-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-500 text-left transform-gpu min-h-[44px] ${
+                className={`group p-6 sm:p-8 rounded-xl border-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-500 text-left transform-gpu min-h-[44px] relative overflow-hidden ${
                   isSelected
-                    ? "border-primary bg-primary/5 shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform scale-105 -translate-y-2"
-                    : "border-gray-200 bg-white hover:border-primary/50 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105"
+                    ? "border-primary shadow-[0_20px_60px_rgb(0,0,0,0.15)] transform scale-105 -translate-y-2"
+                    : "border-gray-200 hover:border-primary/50 hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] hover:-translate-y-2 hover:scale-105"
                 }`}
+                style={{ backgroundColor: '#d6d6d0' }}
               >
+                {/* Layered shadow system for floating effect */}
+                <div className="absolute inset-0 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.08)] group-hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-shadow duration-500"></div>
+                
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
                 <div className="flex flex-col items-center text-center relative z-10">
                   <div
                     className={`rounded-full p-3 sm:p-4 mb-3 sm:mb-4 transition-all duration-300 shadow-md group-hover:scale-110 ${
@@ -112,6 +119,10 @@ const ScenarioSelector = () => {
                     </div>
                   )}
                 </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary/20 rounded-full group-hover:bg-secondary/40 transition-colors duration-300"></div>
               </button>
             )
           })}
