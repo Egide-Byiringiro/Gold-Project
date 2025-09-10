@@ -87,7 +87,7 @@ flex flex-col">
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-3 text-gray-600 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-100 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="md:hidden p-3 text-gray-600 hover:text-gray-900 transition-colors rounded-lg hover:bg-blue-100 min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -103,28 +103,28 @@ flex flex-col">
             <nav className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
               <Link 
                 to="/" 
-                className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+                className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
               >
                 <Home className="w-5 h-5" />
                 {t("nav.home")}
               </Link>
               <Link 
                 to="/scenarios/student" 
-                className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+                className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
               >
                 <Users className="w-5 h-5" />
                 {t("nav.students")}
               </Link>
               <Link 
                 to="/employers" 
-                className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+                className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
               >
                 <Building2 className="w-5 h-5" />
                 {t("nav.employers")}
               </Link>
               <Link 
                 to="/parents" 
-                className="flex items-center gap-3 text-gray-600 hover:text-orange-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 min-h-[44px]"
+                className="flex items-center gap-3 text-gray-600 hover:text-orange-600 transition-colors py-3 px-4 rounded-lg hover:bg-blue-100 min-h-[44px]"
               >
                 <Users2 className="w-5 h-5" />
                 {t("nav.parents")}
